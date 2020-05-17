@@ -37,13 +37,13 @@ const $ = (e) => new jQuery(e);
 
 $('button').hide().show().click(e => console.log(e)).class('name')
 
-/* Íàïèñàòü ìåòîä jQuery.prototype.html(), êîòîðûé âîçâðàùàåò èëè èçìåíÿåò html-ñîäåðæèìîå âûáðàííûõ ýëåìåíòîâ. */
+/*ÐÐ°Ð¿Ð¸ÑÐ°Ñ‚ÑŒ Ð¼ÐµÑ‚Ð¾Ð´ jQuery.prototype.html(), ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ð¸Ð»Ð¸ Ð¸Ð·Ð¼ÐµÐ½ÑÐµÑ‚ html-ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ð¼Ð¾Ðµ Ð²Ñ‹Ð±Ñ€Ð°Ð½Ð½Ñ‹Ñ… ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² */
 jQuery.prototype.html = function (name = this.elements["0"].innerHTML) {
 	this.each(element => element.innerHTML = name);
 	return this.elements["0"].innerHTML;
 }
 
-/*Íàïèñàòü ìåòîä jQuery.prototype.text(), êîòîðûé âîçâðàùàåò èëè èçìåíÿåò òåêñòîâîå ñîäåðæèìîå âûáðàííûõ ýëåìåíòîâ. */
+/*ÐÐ°Ð¿Ð¸ÑÐ°Ñ‚ÑŒ Ð¼ÐµÑ‚Ð¾Ð´ jQuery.prototype.text(), ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ð²Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ Ð¸Ð»Ð¸ Ð¸Ð·Ð¼ÐµÐ½ÑÐµÑ‚ Ñ‚ÐµÐºÑÑ‚Ð¾Ð²Ð¾Ðµ ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ð¼Ð¾Ðµ Ð²Ñ‹Ð±Ñ€Ð°Ð½Ð½Ñ‹Ñ… ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð² */
 jQuery.prototype.text = function (text = this.elements["0"].innerText) {
 	this.each(element => element.innerText = text);
 	return this.elements["0"].innerText;
